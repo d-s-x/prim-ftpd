@@ -48,20 +48,16 @@ public class QuickSettingsService extends TileService {
         Tile tile = this.getQsTile();
         boolean isActive = isActive();
 
-        String newLabel;
         int newState;
 
         // Change the tile to match the service status.
         if (isActive) {
-            newLabel = getString(R.string.quickSettingsServerStarted);
             newState = Tile.STATE_ACTIVE;
         } else {
-            newLabel = getString(R.string.quickSettingsServerStopped);
             newState = Tile.STATE_INACTIVE;
         }
 
         // Change the UI of the tile.
-        tile.setLabel(newLabel);
         tile.setState(newState);
 
         tile.updateTile();
