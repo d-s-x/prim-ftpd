@@ -217,7 +217,7 @@
         <service android:name="org.primftpd.services.ServicesStartingService" />
         <service
             android:name=".services.QuickSettingsService"
-            android:icon="@drawable/ic_notification"
+            android:icon="@drawable/ic_qs_tile"
             android:label="@string/notificationTitle"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
             <intent-filter>
