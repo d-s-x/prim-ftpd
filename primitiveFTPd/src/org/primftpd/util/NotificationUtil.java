@@ -73,22 +73,14 @@ public class NotificationUtil
 		int iconId = R.drawable.ic_notification;
 		int stopIconId = R.drawable.ic_stop_white_24dp;
 		CharSequence tickerText = ctxt.getText(text);
-		CharSequence contentTitle = ctxt.getText(R.string.notificationTitle);
-		CharSequence contentText = tickerText;
-
-		// use main icon as large one
-		Bitmap largeIcon = BitmapFactory.decodeResource(
-				ctxt.getResources(),
-				R.drawable.ic_launcher);
+		CharSequence contentTitle = tickerText;
 
 		long when = System.currentTimeMillis();
 
 		Notification.Builder builder = new Notification.Builder(ctxt)
 				.setTicker(tickerText)
 				.setContentTitle(contentTitle)
-				.setContentText(contentText)
 				.setSmallIcon(iconId)
-				.setLargeIcon(largeIcon)
 				.setContentIntent(contentIntent)
 				.setWhen(when);
 		addChannel(builder, channelId);
